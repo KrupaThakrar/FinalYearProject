@@ -20,7 +20,7 @@ class TopicsController < ApplicationController
 		#render plain: params[:post].inspect
 		@topic = current_user.topics.build(topic_params)
 		if (@topic.save)
-			redirect_to @topic
+			redirect_to @topic, notice: "This topic #{@topic.title} has been uploaded."
 		else
 			render 'new'
 		end 
@@ -32,7 +32,7 @@ class TopicsController < ApplicationController
 
 	def update
 	    if @topic.update(topic_params)
-			redirect_to topic_path(@topic)
+			redirect_to topic_path(@topic), notice: "This topic #{@topic.title} has been updated."
 		else
 			render 'edit'
 		end 
@@ -41,14 +41,13 @@ class TopicsController < ApplicationController
 	def destroy
 		@topic = Topic.find(params[:id])
 		@topic.destroy
-
 		redirect_to topics_path
 	end
 
 	private 
 
 	def topic_params
-		params.require(:topic).permit(:topic_id, :title, :body, :date, :image, :remove_image, :video)
+		params.require(:topic).permit(:topic_id, :title, :body, :date, :image, :remove_image, :video, :attachment)
 	end
 
 	def find_topic

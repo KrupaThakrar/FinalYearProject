@@ -6,6 +6,7 @@ class Topic < ActiveRecord::Base
 
 	mount_uploader :image, ImageUploader
 	mount_uploader :video, VideoUploader
+	mount_uploader :attachment, AttachmentUploader 
 
 	def self.search(search)
 		if search 

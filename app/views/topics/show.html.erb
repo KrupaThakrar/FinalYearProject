@@ -5,11 +5,17 @@
 <p><%= @topic.date %></p>
 <hr>
 
+<!-- Image Show -->
 <%= image_tag @topic.image.url, class: "topic-show" %>
 
-<% @topics.each do |topic|%>
-<%= video_tag topic.video_url.to_s :controls =>true %>
-<% end %>
+<!-- Video Show -->
+<iframe width="800" height="500" src=<%= @topic.video.url %> ></iframe>
+<br>
+<br>
+
+<!-- Attachment Show -->
+<%= attachment_tag @topic.attachment.url, class: "topic-show" %>
+
 
 <%= link_to "Click here to write a review!", new_topic_review_path(@topic), :class => 'btn btn-default' %>
 <br>
