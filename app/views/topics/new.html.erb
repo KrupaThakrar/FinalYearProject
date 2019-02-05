@@ -1,0 +1,41 @@
+<h1> Add Topics </h1>
+<%= form_for @topic, :html => {:multipart => true} do |f| %>
+	<% if @topic.errors.any? %>
+		<% @topic.errors.full_messages.each do |msg| %>
+		<div class="alert alert-danger"><%= msg %></div>
+		<% end %>
+	 <% end %>
+	<p>
+	<%= f.label :title %><br>
+	<%= f.text_field(:title, {:class => 'form-control'}) %>
+	</p>
+	<p>
+	<%= f.label :description %><br>
+	<%= f.text_area(:body, {:class => 'form-control'}) %>
+	</p>
+
+	<%= f.label :image %><br>
+	<%= f.file_field :image %>
+	<% if @topic.image %>
+	  <%= image_tag @topic.image.url, class: "topic-show" %>
+	  <%= f.check_box :remove_image %>
+		Remove Image
+	<% end %>
+
+	<p>
+	<%= f.label :video %><br>
+    <%= f.file_field :video %>
+    </p>
+
+	<p>
+	<%= f.label :date %><br>
+	<%= f.date_select :date %>
+	</p>
+
+	<p>
+	<%= f.submit({:class => 'btn btn-primary'}) %>
+	</p>
+
+	<%= link_to "Back", :back %>
+<% end %>
+

@@ -1,0 +1,27 @@
+<if !user_signed_in? %>
+
+<%= form_tag topics_path, :method => 'get' do %>
+	<%= text_field_tag :search, params[:search] %>
+	<%= submit_tag "Search" %>
+<% end %>
+
+
+<% @topics.each do |topic| %>
+	<div class="topic">
+	<h3><%= topic.title %></h3>
+	<p><%= topic.id %></p>
+	<p class="text-justify" ><%= topic.body %></p>
+	<p><%= topic.date %></p>
+	<%= image_tag topic.image.url, class: "topic-show" if topic.image? %>
+</div>
+	<% if current_user && current_user.admin? %>
+		<%= link_to "Edit", edit_topic_path(topic), :class => 'btn btn-default' %>
+	<%= link_to "Destroy", topic, :class => 'btn btn-default', method: :delete, data: {confirm: 'Are you sure?'} %>
+	<% end %>
+	<%= link_to "Show", topic_path(topic), :class => 'btn btn-default' %>
+<% end %>
+
+<div>
+	<%= will_paginate @topic, renderer: BootstrapPagination::Rails %>
+</end>
+

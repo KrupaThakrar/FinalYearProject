@@ -1,0 +1,57 @@
+<br>
+<br>
+<p><%= @topic.title %></p>
+<p><%= @topic.body %></p>
+<p><%= @topic.date %></p>
+<hr>
+
+<%= image_tag @topic.image.url, class: "topic-show" %>
+
+<% @topics.each do |topic|%>
+<%= video_tag topic.video_url.to_s :controls =>true %>
+<% end %>
+
+<%= link_to "Click here to write a review!", new_topic_review_path(@topic), :class => 'btn btn-default' %>
+<br>
+<br>
+
+<% if @reviews.blank? %>
+<h3>No reviews have been added yet!</h3>
+<%= link_to "Write Review", new_topic_review_path(@topic), class: "btn btn-danger" %>
+<% else %>
+<% @reviews.each do |review| %>
+<div class="reviews">
+	<div class="star-rating" data-score= <%= review.rating %> ></div>
+	<p><%= review.comment %></p>
+</div>
+<% end %>
+<% end %>
+
+<br>
+<br>
+<% if current_user && current_user.admin? %>
+<%= link_to "Edit", edit_topic_path(@topic), :class => 'btn btn-default' %>
+<%= link_to "Delete", topic_path(@topic),
+					method: :delete,
+					data: {confirm: 'Are you sure?'},
+					:class => 'btn btn-danger' %>
+
+<br>
+<br>
+
+<%= link_to "Edit", edit_topic_path %>
+<%= link_to "Back", topics_path %>
+
+
+<script>
+$('.star-rating').raty({
+	path: '/assets/'
+	read0nly: true,
+	score: function() {
+		return $(this).attr('data-score');
+	}
+});
+</script>
+
+<% end %>
+

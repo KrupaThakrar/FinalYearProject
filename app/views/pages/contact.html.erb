@@ -1,0 +1,47 @@
+<h1><%= @title %></h1>
+<p><%= @content %></p>
+
+<br>   
+<br>
+<font size="6">Where are we based?</font>
+</br>
+</br>
+<p> 
+Gateway House,
+Leicester,
+LE2
+<p> 
+<div style='width: 1000px;'>
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2421.6950615254286!2d-1.1401996847569384!3d52.629354479835065!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487760df1661071b%3A0xb2483bae114f6f5a!2sGateway+House!5e0!3m2!1sen!2suk!4v1491309280723" width="1000" height="800" frameborder="0" style="border:0" allowfullscreen></iframe>
+</div>
+
+
+
+<br>
+<br>
+
+<h1>Any enquiries:</h1>
+<center><form name="htmlform" method="get" action="/website/send_form">
+<table width="700px">
+
+
+ 
+<form id="contact_form" action="#" method="POST" enctype="multipart/form-data">
+
+  <div class="row">
+    <label for="name">Your Name:</label><br />
+    <input id="name" class="input" name="name" type="text" value="" size="30" /><br />
+  </div>
+
+  <div class="row">
+    <label for="email">Your Email:</label><br />
+    <input id="email" class="input" name="email" type="text" value="" size="30" /><br />
+  </div>
+
+  <div class="row">
+    <label for="message">Your Message:</label><br />
+    <textarea id="message" class="input" name="message" rows="7" cols="30"></textarea><br />
+  </div>
+  <input id="submit_button" type="submit" value="Send email" />
+
+</form> 

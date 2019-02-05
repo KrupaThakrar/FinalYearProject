@@ -1,0 +1,36 @@
+<h1> Edit Topic </h1>
+<%= form_for :topic, url: topic_path(@topic), method: :patch do |f| %>
+	<% if @topic.errors.any? %>
+		<% @topic.errors.full_messages.each do |msg| %>
+		<div class="alert alert-danger"><%= msg %></div>
+		<% end %>
+	 <% end %>
+	<p>
+	<%= f.label :title %><br>
+	<%= f.text_field(:title, {:class => 'form-control'}) %>
+	</p>
+	<p>
+	<%= f.label :description %><br>
+	<%= f.text_area(:body, {:class => 'form-control'}) %>
+	</p>
+
+	<%= f.file_field :image %>
+	<% if @topic.image %>
+	  <%= image_tag @topic.image.url, class: "topic-show" %>
+	  <%= f.check_box :remove_image %>
+		Remove Image
+	<% end %>
+
+	<p>
+	<%= f.label :date %><br>
+	<%= f.date_select :date %>
+	</p>
+
+	<p>
+	<%= f.submit({:class => 'btn btn-primary'}) %>
+	</p>
+
+	<%= link_to "Back", :back %>
+
+<% end %>
+
