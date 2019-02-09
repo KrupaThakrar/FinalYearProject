@@ -10,6 +10,11 @@ class TopicsController < ApplicationController
 	def show
 		@topic = Topic.find(params[:id])
 		@reviews = Review.where(topic_id: @topic.id).order("created_at DESC")
+		if @topic.reviews.blank?
+		   @average_review = 0
+		else
+	    @average_review = @topic.reviews.average(:rating).round(2)
+	end
 	end 
 
 	def new
