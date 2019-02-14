@@ -33,9 +33,13 @@
     </p>
 
 	<p>
+	<div class="field">
 	<%= f.label :date %><br>
 	<%= f.date_select :date %>
 	</p>
+    
+    <%= f.date_select :event_date %>
+  </div>
 
 	<p>
 	<%= f.submit({:class => 'btn btn-primary'}) %>

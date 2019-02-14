@@ -1,6 +1,7 @@
 <div class="row">
 	
 <div class="col-md-4">
+
 <!-- Image Show -->
 <%= image_tag @topic.image.url, class: "topic-show" %>
 
@@ -24,20 +25,24 @@
 					method: :delete,
 					data: {confirm: 'Are you sure?'},
 					:class => 'btn btn-custom' %>
+<% end %>
+
 <br>
 <br>
 
 <div>
 <%= link_to "Click here to write a review!", new_topic_review_path(@topic), :class => 'btn btn-custom' %>
 </div>
-
-<!-- Video Show -->
-<!-- <iframe width="800" height="500" src=<%= @topic.video.url %> ></iframe>
 <br>
-<br> -->
+<br>
+<!-- Video Show -->
+<iframe width="800" height="500" src=<%= @topic.video.url %> ></iframe>
+<br>
+<br> 
 
 <!-- Attachment Show -->
-<!-- <iframe src="@topic.attachment.url"></iframe> -->
+ <iframe width="800" height="500" src="@topic.attachment.url"></iframe> 
+
 <br>
 <br>
 <div class="row">
@@ -50,7 +55,7 @@
     <!-- Where the reviews/ratings will go  -->
     <%= render @topic.reviews %>
 </div>
-<% end %>
+
 
 <br>
 <%= link_to 'Back', topics_path %>

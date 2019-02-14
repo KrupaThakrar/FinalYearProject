@@ -1,6 +1,6 @@
 class ReviewsController < ApplicationController
   before_action :authenticate_user! 
-  before_action :find_book
+  before_action :find_topic
   before_action :find_review, only: [:edit, :update, :destroy]
   before_action :authenticate_user!, only: [:new, :edit]
   # GET /reviews/new
@@ -15,6 +15,7 @@ class ReviewsController < ApplicationController
   # POST /reviews
   # POST /reviews.json
   def create
+    @topic = Topic.find(params[:topic_id])
     @review = Review.new(review_params)
     @review.user_id = current_user.id
     @review.topic_id = @topic.id
@@ -49,10 +50,10 @@ class ReviewsController < ApplicationController
 
   private
   def review_params
-        params.require(:review).permit(:rating, :comment)
+        params.require(:review).permit(:rating, :comment, :username)
       end
 
-      def find_book
+      def find_topic
         @topic = Topic.find(params[:topic_id])
       end
 

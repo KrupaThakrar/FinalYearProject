@@ -4,7 +4,7 @@ class TopicsController < ApplicationController
 	before_action :authenticate_user!, except: [:show, :index, :update, :destroy]
 	
 	def index
-		@topics = Topic.search(params[:search]).paginate(:page => params[:page], :per_page => 3)
+		@topics = Topic.search(params[:search]).paginate(:page => params[:page], :per_page => 5)
 	end
 
 	def show

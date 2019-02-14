@@ -1,0 +1,21 @@
+{:uriI"²file:///C:/Sites/TechForSeniors%20-%20Copy/app/assets/javascripts/raty-master/bower.json?type=application/json&id=e996d8aa2e03e586dda390df304d87f978720202ebfec6beeda3845885ebb875:ET:load_pathI"app/assets/javascripts;T:filenameI"2app/assets/javascripts/raty-master/bower.json;T:	nameI"raty-master/bower;T:logical_pathI"raty-master/bower.json;T:content_typeI"application/json;T:sourceI"){
+  "authors":     ["Washington Botelho <wbotelhos@gmail.com> (http://wbotelhos.com)"],
+  "description": "jQuery Raty - A Star Rating Plugin",
+
+  "dependencies": {
+    "jquery": "^3.3.1"
+  },
+
+  "homepage": "https://github.com/wbotelhos/raty",
+  "ignore":   ["**/.*", "node_modules", "spec", "vendor"],
+  "keywords": ["classificacao", "classificar", "javascript", "jquery", "library", "plugin", "rating", "raty", "star", "staring", "votar", "voto"],
+  "license":  "MIT",
+  "main":     "lib/jquery.raty.js",
+  "name":     "raty",
+  "version":  "2.9.0"
+}
+;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"@processors:type=application/json&file_type=application/json;TTI"dfile-digest:///C:/Sites/TechForSeniors%20-%20Copy/app/assets/javascripts/raty-master/bower.json;TTF:charsetI"
+utf-8;F:digest"%ÿñËÝ…þú q£ö`<™åVMv\ëï2Mö›:lengthi):dependencies_digest"%¯ˆ R¤8 xµ²[ÜÕJåCTÖÝX5%¸:idI"Ee996d8aa2e03e586dda390df304d87f978720202ebfec6beeda3845885ebb875;F:
+mtimel+<aS\

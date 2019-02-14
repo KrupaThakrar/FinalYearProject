@@ -1,12 +1,13 @@
 <div class="review">
 
+<!-- Display for reviews -->
+<!-- <p><strong><%= review.username %></strong></p> -->
+<%= @topic.user_id %>
 <div class="review-rating" data-score="<%= review.rating %>"></div>
-
 <p class="review-comment"><%= review.comment %></p>
 
+<!-- Only if user signed in, display edit and delete -->
 <% if user_signed_in? %>
-
-<!-- Show edit and delete option only if review is posted by them -->
 <% if review.user_id == current_user.id %>
 
 <%= link_to "Edit", edit_topic_review_path(review.topic, review) %>

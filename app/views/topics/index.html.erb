@@ -5,13 +5,13 @@
 	<%= submit_tag "Search" %>
 <% end %>
 
-
 <% @topics.each do |topic| %>
 	<div class="topic">
 	<h3><%= topic.title %></h3>
 	<p><%= topic.id %></p>
 	<p class="text-justify" ><%= topic.body %></p>
 	<p><%= topic.date %></p>
+
 	<%= image_tag topic.image.url, class: "topic-show" if topic.image? %>
 </div>
 	<% if current_user && current_user.admin? %>

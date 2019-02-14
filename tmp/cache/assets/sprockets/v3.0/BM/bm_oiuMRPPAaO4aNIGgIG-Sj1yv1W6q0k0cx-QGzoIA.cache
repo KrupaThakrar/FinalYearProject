@@ -1,0 +1,65 @@
+{:uriI"¥file:///C:/Sites/TechForSeniors%20-%20Copy/app/assets/javascripts/raty-master/package.json?type=application/json&id=8961e6a4cc822d4995995be625b51f5085a51351994e5afb45d68ee9cbc1917f:ET:load_pathI"app/assets/javascripts;T:filenameI"4app/assets/javascripts/raty-master/package.json;T:	nameI"raty-master/package;T:logical_pathI"raty-master/package.json;T:content_typeI"application/json;T:sourceI"S{
+  "author": "Washington Botelho",
+  "bugs": {
+    "url": "https://github.com/wbotelhos/raty/issues"
+  },
+  "contributors": [
+    "Washington Botelho <wbotelhos@gmail.com> (http://wbotelhos.com)"
+  ],
+  "demos": [
+    "demo/index.html"
+  ],
+  "dependencies": {
+    "jquery": "^3.3.1"
+  },
+  "description": "jQuery Raty - A Star Rating Plugin",
+  "devDependencies": {
+    "jasmine-core": "^2.99.1",
+    "karma": "^1.7.1",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-firefox-launcher": "^1.1.0",
+    "karma-ie-launcher": "^1.0.0",
+    "karma-jasmine": "^1.1.2",
+    "karma-opera-launcher": "^1.0.0",
+    "karma-phantomjs-launcher": "^1.0.4",
+    "karma-safari-launcher": "^1.0.0"
+  },
+  "directories": {
+    "lib": "lib",
+    "test": "spec"
+  },
+  "homepage": "https://github.com/wbotelhos/raty",
+  "keywords": [
+    "classificacao",
+    "classificar",
+    "javascript",
+    "jquery",
+    "library",
+    "plugin",
+    "rating",
+    "raty",
+    "star",
+    "staring",
+    "votar",
+    "voto"
+  ],
+  "license": "MIT",
+  "main": "lib/jquery.raty.js",
+  "maintainers": [
+    "Washington Botelho <wbotelhos@gmail.com> (http://wbotelhos.com)"
+  ],
+  "name": "raty-js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wbotelhos/raty"
+  },
+  "scripts": {
+    "test": "node_modules/karma/bin/karma start karma.conf.js"
+  },
+  "version": "2.9.0"
+}
+;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"@processors:type=application/json&file_type=application/json;TTI"ffile-digest:///C:/Sites/TechForSeniors%20-%20Copy/app/assets/javascripts/raty-master/package.json;TTF:charsetI"
+utf-8;F:digest"%j∏Íµı˛‘íNü„¸|ÜG˘N†kﬂ´å|±tﬁ:lengthiS:dependencies_digest"%9Ì9“)ﬁãã∏ÑO◊ï≤%Å#ÌÌ)ß˝U‰ë§A˛∫:idI"E8961e6a4cc822d4995995be625b51f5085a51351994e5afb45d68ee9cbc1917f;F:
+mtimel+<aS\

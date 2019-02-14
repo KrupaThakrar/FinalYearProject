@@ -68,6 +68,10 @@ GEM
       railties (>= 4.1.0, < 6.0)
       responders
       warden (~> 1.2.3)
+    dotenv (2.6.0)
+    dotenv-rails (2.6.0)
+      dotenv (= 2.6.0)
+      railties (>= 3.2, < 6.0)
     erubis (2.7.0)
     execjs (2.7.0)
     ffi (1.10.0-x64-mingw32)
@@ -194,6 +198,7 @@ DEPENDENCIES
   carrierwave (~> 1.0)
   coffee-rails (~> 4.1.0)
   devise (~> 4.2)
+  dotenv-rails
   jbuilder (~> 2.0)
   jquery-rails
   rails (= 4.2.5.1)
