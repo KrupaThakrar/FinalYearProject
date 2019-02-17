@@ -31,6 +31,10 @@ gem 'carrierwave', '~> 1.0'
 
 gem 'dotenv-rails'
 
+gem 'jquery-ui-rails'
+
+gem 'acts_as_votable', '~> 0.12.0'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

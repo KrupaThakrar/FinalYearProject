@@ -14,6 +14,24 @@
 
 	<%= image_tag topic.image.url, class: "topic-show" if topic.image? %>
 </div>
+
+<!-- Voting like or dislike -->
+<%= link_to like_topic_path(topic), class: "like", method: :put do %>
+    <button type="button" class="btn btn-info" aria-label="Left Align">
+    	<span class="glyphicon glyphicon-thumbs-up glyphicon-align-center" aria-hidden="true"></span>
+    	<span class="badge"><%= topic.get_upvotes.size %></span>
+    </button>
+ <% end %>
+
+ <%= link_to unlike_topic_path(topic), class: "unlike", method: :put do %>
+    <button type="button" class="btn btn-info" aria-label="Right Align">
+    	<span class="glyphicon glyphicon-thumbs-down glyphicon-align-center" aria-hidden="true"></span>
+    	<span class="badge"><%= topic.get_downvotes.size %></span>
+    </button>
+ <% end %>
+ <!-- End of voting -->
+<br>
+<br>
 	<% if current_user && current_user.admin? %>
 		<%= link_to "Edit", edit_topic_path(topic), :class => 'btn btn-default' %>
 	<%= link_to "Destroy", topic, :class => 'btn btn-default', method: :delete, data: {confirm: 'Are you sure?'} %>

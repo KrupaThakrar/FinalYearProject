@@ -3,8 +3,13 @@ Rails.application.routes.draw do
   devise_for :users
   
   resources :topics do
+    
   resources :reviews, except: [:show, :index]
+  member do
+      put "like" => "topics#upvote"
+      put "unlike" => "topics#downvote"
 end
+end 
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

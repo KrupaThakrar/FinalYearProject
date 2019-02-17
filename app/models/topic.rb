@@ -1,4 +1,5 @@
 class Topic < ActiveRecord::Base
+	acts_as_votable
 	belongs_to :user
 	has_many :reviews
 	validates :title, presence: true,

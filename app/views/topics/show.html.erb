@@ -36,12 +36,16 @@
 <br>
 <br>
 <!-- Video Show -->
-<iframe width="800" height="500" src=<%= @topic.video.url %> ></iframe>
-<br>
-<br> 
+<% if @topic.video.url %>
+	<iframe width="800" height="500" src="<%= @topic.video.url %>" ></iframe>
+	<br>
+	<br> 
+<% end %>
 
 <!-- Attachment Show -->
- <iframe width="800" height="500" src="@topic.attachment.url"></iframe> 
+<%= link_to 'Download' %>
+
+<!--  <iframe width="800" height="500" src="@topic.attachment.url"></iframe>  -->
 
 <br>
 <br>
