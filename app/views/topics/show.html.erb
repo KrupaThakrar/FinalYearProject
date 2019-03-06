@@ -43,7 +43,9 @@
 <% end %>
 
 <!-- Attachment Show -->
-<%= link_to 'Download' %>
+<% if resumes_url %>
+<%= link_to 'Download', resumes_url %>
+<% end %>
 
 <!--  <iframe width="800" height="500" src="@topic.attachment.url"></iframe>  -->
 
