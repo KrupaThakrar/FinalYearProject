@@ -4,14 +4,17 @@
   </div>
 <% end %>
 <br />
-<%= link_to "New Resume", new_resume_path, class: "btn btn-primary" %>
+<% if current_user && current_user.admin? %>
+<%= link_to "New Resume", new_resume_path, :class => 'btn btn-custom' %>   
+<% end %>
 <br />
 <br />
 <table class="table table-bordered table-striped">
   <thead>
     <tr>
-      <th>Name</th>
+      <th>Name</th>  
       <th>Download Link</th>
+
       <th>&nbsp;</th>
     </tr>
   </thead>
@@ -20,7 +23,10 @@
       <tr>
         <td><%= resume.name %></td>
         <td><%= link_to "Download file by clicking me!", resume.attachment_url %></td>
+        <% if current_user && current_user.admin? %>
+        <td><%= link_to "Edit", new_resume_path(resume), :class => 'btn btn-default' %></td>
         <td><%= button_to "Delete",  resume, method: :delete, class: "btn btn-danger", confirm: "Are you sure that you wish to delete #{resume.name}?" %></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>

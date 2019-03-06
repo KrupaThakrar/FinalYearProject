@@ -1,5 +1,7 @@
 <if !user_signed_in? %>
 
+    <%= link_to 'Download Topics', resumes_url, :class => 'btn btn-danger' %>
+
 <%= form_tag topics_path, :method => 'get' do %>
 	<%= text_field_tag :search, params[:search] %>
 	<%= submit_tag "Search" %>
