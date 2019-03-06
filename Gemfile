@@ -32,6 +32,7 @@ gem 'carrierwave', '~> 1.0'
 gem 'dotenv-rails'
 
 gem 'jquery-ui-rails'
+gem 'jquery-rails'
 
 gem 'acts_as_votable', '~> 0.12.0'
 

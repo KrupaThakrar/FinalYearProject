@@ -1,11 +1,18 @@
 <if !user_signed_in? %>
 
-    <%= link_to 'Download Topics', resumes_url, :class => 'btn btn-danger' %>
+<%= link_to 'Download Topics', resumes_url, :class => 'btn btn-danger' %>
 
 <%= form_tag topics_path, :method => 'get' do %>
 	<%= text_field_tag :search, params[:search] %>
 	<%= submit_tag "Search" %>
 <% end %>
+
+<div id="acess-icons" class="" style="display: block; font-size: 16px;">
+            <div class="acess-icon" style="font-size: 16px;"><img id="contrast" title="Contrast" src="images/contraste40.png" class="" style="font-size: 16px;"></div>
+            <div class="acess-icon" style="font-size: 16px;"><img id="increaseFont" title="Increase Font" src="images/fontsma40.png" class="" style="font-size: 16px;"></div>
+            <div class="acess-icon" style="font-size: 16px;"><img id="decreaseFont" title="Decrease Font" src="images/fontsme40.png" class="" style="font-size: 16px;"></div>
+        </div>
+    </div>
 
 <% @topics.each do |topic| %>
 	<div class="topic">
@@ -40,6 +47,15 @@
 	<% end %>
 	<%= link_to "Show", topic_path(topic), :class => 'btn btn-default' %>
 <% end %>
+
+<div id="jbbutton" title="Accessibility" class="" style="font-size: 16px;"><img src="img/acessc50.png" class="" style="font-size: 16px;"></div>
+<img src="img/acessc50.png" class="" style="font-size: 16px;">
+<div>
+ <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js" class="" style="font-size: 16px;"></script>
+ <script type="text/javascript" src="jbility.js" class="" style="font-size: 16px;"></script>
+ <script type="text/javascript" class="" style="font-size: 16px;">
+</div>
+
 
 <div>
 	<%= will_paginate @topic, renderer: BootstrapPagination::Rails %>
