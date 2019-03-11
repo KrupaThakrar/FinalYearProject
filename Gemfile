@@ -25,8 +25,6 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'bootstrap-sass', '3.3.6'
 
-gem 'devise', '~> 4.2'
-
 gem 'carrierwave', '~> 1.0'
 
 gem 'dotenv-rails'
@@ -36,7 +34,10 @@ gem 'jquery-rails'
 
 gem 'acts_as_votable', '~> 0.12.0'
 
-
+gem 'activeadmin'
+gem 'inherited_resources'
+gem 'devise', '~> 4.2'
+gem 'coffee-script-source', '~> 1.4.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

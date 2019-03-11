@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
   
+  resources :seniors
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
   resources :resumes, only: [:index, :new, :create, :destroy]
 
 

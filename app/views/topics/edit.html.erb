@@ -14,6 +14,7 @@
 	<%= f.text_area(:body, {:class => 'form-control'}) %>
 	</p>
 
+	<%= f.label :image %><br>
 	<%= f.file_field :image %>
 	<% if @topic.image %>
 	  <%= image_tag @topic.image.url, class: "topic-show" %>
@@ -24,11 +25,6 @@
 	<p>
 	<%= f.label :video %><br>
     <%= f.file_field :video %>
-    </p>
-
-    <p>
-    <%= f.label :attachment %><br>
-    <%= f.file_field :attachment %>
     </p>
 
 	<p>

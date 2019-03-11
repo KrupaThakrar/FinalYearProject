@@ -1,0 +1,6 @@
+I"?(function() {
+
+  window.ActiveAdmin = {};
+
+}).call(this);
+:ET

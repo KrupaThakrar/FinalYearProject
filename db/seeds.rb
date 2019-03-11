@@ -6,11 +6,16 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-User.create(:email => "krupa_17@hotmail.co.uk", :password => "Thakrar123", :password_confirmation => "Thakrar123")
+Topic.create(:title => "How to set up Whatsapp on your smart phone",
+	:body => "1.	Open WhatsApp.
+2.	Tap Agree and Continue at the bottom of the screen.
+3.	Tap Continue on the pop-up.
+4.	Tap Allow on both boxes to grant WhatsApp access to your files and contacts.
+5.	Enter your phone number.
+6.	Tap OK to confirm the number you entered.
+7.	Enter the verification code that's texted to you.
+8.	Tap Next.
+9.	You should reach the page where you type your name and upload a picture
+10.	You are all set!" ,:date => "2019/12/31")
 
-Topic.create(:title => "Alice in Wonderland",:body => "Young Alice is sitting by the river bank with her older sister, feeling bored; her sister's book has no pictures or conversation, and thus holds no interest for Alice. Suddenly, a white rabbit scampers back, proclaims that it is very late, and pulls a pocket watch out of its waistcoat. Though she initially does not notice the strangeness of a talking rabbit, when she sees the rabbit's clothes and watch, she becomes very interested. She follows the rabbit, hopping right down a deep rabbit hole after him, giving no thought of how she plans to get out again." ,:date => "2019/12/31")
-Topic.create(:title => "Alice in Wonderland",:body => "Young Alice is sitting by the river bank with her older sister, feeling bored; her sister's book has no pictures or conversation, and thus holds no interest for Alice. Suddenly, a white rabbit scampers back, proclaims that it is very late, and pulls a pocket watch out of its waistcoat. Though she initially does not notice the strangeness of a talking rabbit, when she sees the rabbit's clothes and watch, she becomes very interested. She follows the rabbit, hopping right down a deep rabbit hole after him, giving no thought of how she plans to get out again." ,:date => "2019/12/31")
-Topic.create(:title => "Alice in Wonderland",:body => "Young Alice is sitting by the river bank with her older sister, feeling bored; her sister's book has no pictures or conversation, and thus holds no interest for Alice. Suddenly, a white rabbit scampers back, proclaims that it is very late, and pulls a pocket watch out of its waistcoat. Though she initially does not notice the strangeness of a talking rabbit, when she sees the rabbit's clothes and watch, she becomes very interested. She follows the rabbit, hopping right down a deep rabbit hole after him, giving no thought of how she plans to get out again." ,:date => "2019/12/31")
-Topic.create(:title => "Alice in Wonderland",:body => "Young Alice is sitting by the river bank with her older sister, feeling bored; her sister's book has no pictures or conversation, and thus holds no interest for Alice. Suddenly, a white rabbit scampers back, proclaims that it is very late, and pulls a pocket watch out of its waistcoat. Though she initially does not notice the strangeness of a talking rabbit, when she sees the rabbit's clothes and watch, she becomes very interested. She follows the rabbit, hopping right down a deep rabbit hole after him, giving no thought of how she plans to get out again." ,:date => "2019/12/31")
-Topic.create(:title => "Alice in Wonderland",:body => "Young Alice is sitting by the river bank with her older sister, feeling bored; her sister's book has no pictures or conversation, and thus holds no interest for Alice. Suddenly, a white rabbit scampers back, proclaims that it is very late, and pulls a pocket watch out of its waistcoat. Though she initially does not notice the strangeness of a talking rabbit, when she sees the rabbit's clothes and watch, she becomes very interested. She follows the rabbit, hopping right down a deep rabbit hole after him, giving no thought of how she plans to get out again." ,:date => "2019/12/31")
-Topic.create(:title => "Alice in Wonderland",:body => "Young Alice is sitting by the river bank with her older sister, feeling bored; her sister's book has no pictures or conversation, and thus holds no interest for Alice. Suddenly, a white rabbit scampers back, proclaims that it is very late, and pulls a pocket watch out of its waistcoat. Though she initially does not notice the strangeness of a talking rabbit, when she sees the rabbit's clothes and watch, she becomes very interested. She follows the rabbit, hopping right down a deep rabbit hole after him, giving no thought of how she plans to get out again." ,:date => "2019/12/31")
+AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
