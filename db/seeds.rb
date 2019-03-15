@@ -18,4 +18,13 @@ Topic.create(:title => "How to set up Whatsapp on your smart phone",
 9.	You should reach the page where you type your name and upload a picture
 10.	You are all set!" ,:date => "2019/12/31")
 
-AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
+Topic.create(:title => "How to set up Whatsapp on your smart phone",
+	:body => "To create a Facebook account:
+1.	On the address bar, type in facebook.com and the main sign up page will appear.
+2.	Enter the name you go by in everyday life.
+3.	Enter your date of birth.
+4.	Enter your mobile phone number. To use an email instead, tap Sign up with email.
+5.	Tap Female or Male to select your gender.
+6.	Choose a password and tap Sign Up.
+To finish creating your account, you need to confirm your email or mobile number.
+If you have difficulties signing up, here is a tutorial" ,:date => "2019/12/21")

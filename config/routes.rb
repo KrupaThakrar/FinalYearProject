@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   
+  get 'startup/index'
+
   resources :seniors
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
