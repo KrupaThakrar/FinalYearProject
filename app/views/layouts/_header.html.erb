@@ -1,10 +1,10 @@
      <nav>
     <ul class="nav navbar-nav navbar-left">
-        <li><%= link_to "Home", home_path, :class => 'btn btn-secondary' %></li>
-        <li><%= link_to "About Us", about_path, :class => 'btn btn-basic' %></li>
-        <li><%= link_to "Topics", home_path, :class => 'btn btn-basic' %> </li>
-        <li><%= link_to "News", news_path, :class => 'btn btn-basic' %></li>
-        <li><%= link_to "Contact", contact_path, :class => 'btn btn-basic' %></li><br>
+        <li><%= link_to "Home", home_path, :class => 'btn btn-custom' %></li>
+        <li><%= link_to "About Us", about_path, :class => 'btn btn-custom' %></li>
+        <li><%= link_to "Topics", home_path, :class => 'btn btn-custom' %> </li>
+        <li><%= link_to "News", news_path, :class => 'btn btn-custom' %></li>
+        <li><%= link_to "Contact", contact_path, :class => 'btn btn-custom' %></li><br>
         <% if user_signed_in? %>
         <li>Logged in as <strong><%= current_user.email %></strong></li>
         <% end %>
