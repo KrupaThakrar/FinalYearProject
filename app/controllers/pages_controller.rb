@@ -11,4 +11,6 @@ class PagesController < ApplicationController
 		@title = 'Contact';
 		@content = 'This is the contact page'
 	end
+	def index
+	end 
 end

@@ -28,12 +28,13 @@ end
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'topics#index', as: 'home'
+  root 'pages#index', as: 'home'
 
   # Example of regular route:
-  get 'about' => 'pages#about', as: 'about'
-  get 'contact' => 'pages#contact', as: 'contact'
-  get 'news' => 'pages#news', as: 'news'
+  get 'about' => 'pages#about'
+  get 'contact' => 'pages#contact'
+  get 'news' => 'pages#news'
+  get 'show' => 'topics#index'
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase

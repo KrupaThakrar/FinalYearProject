@@ -1,0 +1,57 @@
+<if !user_signed_in? %>
+
+<br>
+<%= link_to 'Download Topics', resumes_url, :class => 'btn btn-danger' %>
+<br>
+<br>
+<%= form_tag topics_path, :method => 'get' do %>
+	<%= text_field_tag :search, params[:search] %>
+	<%= submit_tag "Search" %>
+<% end %>
+
+
+<h2>Most Popular Posts</h2>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+<br>
+<br>
+<br>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="thumbnail">
+        <a href="/topics/2" target="_blank">
+          <img src="/assets/elder.jpg" alt="Lights" style="width:100%">
+          <div class="caption">
+            <p>How to use skype</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="thumbnail">
+        <a href="/topics/6" target="_blank">
+          <img src="/assets/fitbit.jpg" alt="Nature" style="width:100%">
+          <div class="caption">
+            <p>How does a fitbit benefit your health?</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="thumbnail">
+        <a href="/topics/13" target="_blank">
+          <img src="/assets/laptop.jpg" alt="Fjords" style="width:100%">
+          <div class="caption">
+            <p>How to set up emails</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
