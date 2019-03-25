@@ -1,15 +1,15 @@
 class AppointmentsController < ApplicationController
 
   def index
-    @appointments = Appointment.all
+    @appointments = Appointment.where(user_id: current_user)
   end
 
   def new
-    @appointment = Appointment.new
+    @appointment = current_user.appointments.build
   end
 
   def create
-    @appointment = Appointment.create(appointment_params)
+    @appointment = current_user.appointments.build(appointment_params)
     if @appointment.save
       name = @appointment.name
       redirect_to appointments_path

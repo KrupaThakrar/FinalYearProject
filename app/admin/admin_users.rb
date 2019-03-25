@@ -1,6 +1,8 @@
 ActiveAdmin.register AdminUser do
   config.remove_action_item(:destroy)
+  
   permit_params :email, :password, :password_confirmation
+
 
   index do
     selectable_column

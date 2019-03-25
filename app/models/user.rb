@@ -7,6 +7,7 @@ class User < ActiveRecord::Base
   has_many :topics
   has_many :reviews
   has_many :bookings, dependent: :destroy
+  has_many :appointments
 
   def admin?
   	admin

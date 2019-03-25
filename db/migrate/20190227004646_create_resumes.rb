@@ -3,7 +3,6 @@ class CreateResumes < ActiveRecord::Migration
     create_table :resumes do |t|
       t.string :name
       t.string :attachment
-      t.string :description
 
       t.timestamps null: false
     end

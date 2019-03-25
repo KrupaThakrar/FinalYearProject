@@ -1,9 +1,5 @@
 <%= form_for([@appointment, @booking]) do |f| %>
   <p>
-  	<%= f.label 'email', 'email' %>
-    <%= f.text_field 'email', placeholder: 'Email'%>
-  <p>
-  <p>
     <%= f.label 'start_time', 'Start time' %>
     <%= f.datetime_select :start_time, { minute_step: 15 } %>
   </p>
