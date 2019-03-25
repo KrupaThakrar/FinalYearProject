@@ -2,6 +2,7 @@ class Topic < ActiveRecord::Base
 	acts_as_votable
 	belongs_to :user
 	has_many :reviews
+	has_many :appointment
 	has_one :resumes
 	validates :title, presence: true,
 						length: {minimum: 5}

@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
   
+  resources :appointments do
+	  resources :bookings
+	end
   get 'startup/index'
 
-  resources :seniors
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   resources :resumes, only: [:index, :new, :create, :destroy]
@@ -35,6 +37,8 @@ end
   get 'contact' => 'pages#contact'
   get 'news' => 'pages#news'
   get 'show' => 'topics#index'
+
+  get 'new' => 'booking#new'
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase

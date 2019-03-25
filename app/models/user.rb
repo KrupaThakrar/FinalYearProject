@@ -6,6 +6,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :validatable
   has_many :topics
   has_many :reviews
+  has_many :bookings, dependent: :destroy
 
   def admin?
   	admin

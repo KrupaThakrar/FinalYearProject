@@ -18,6 +18,7 @@
     <% end %>
 
     <% if user_signed_in? %>
+    <li><%= link_to "Drop Ins", appointments_path, :class => 'btn btn-custom' %></li>
     <li><%= link_to "Edit Profile", edit_user_registration_path, :class => 'btn btn-custom' %></li>
     <li><%= link_to "Log out", destroy_user_session_path, method: :delete, :class => 'btn btn-custom' %></li>
        <% else %>

@@ -1,0 +1,21 @@
+<h3>appointments</h3>
+
+
+<% @appointments.each do |appointment| %>	
+
+
+  <div class="appointment">
+    <%= appointment.name %>
+    <%= link_to "New", new_appointment_path(appointment),:class => 'btn btn-secondary' %>   
+    <%= link_to "Show all bookings", appointment_bookings_path(appointment), :class => 'btn btn-secondary' %>
+    <%= link_to "Add booking", new_appointment_booking_path(appointment), :class => 'btn btn-secondary' %>
+    <% if user_signed_in? %>   
+    <!-- Only user who creates booking is able to view -->
+	<% if appointment.user_id == current_user.id %>
+	<%= link_to "Delete", appointment_path(appointment), data: { confirm: 'Are you sure?' }, method: :delete, :class => 'btn btn-secondary'  %>
+	    <%= link_to "Edit", edit_appointment_path(appointment),:class => 'btn btn-secondary' %>
+ </div>
+<% end %>
+<% end %>
+<% end %>
+

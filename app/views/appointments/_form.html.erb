@@ -1,0 +1,6 @@
+<%= form_for @appointment do |f| %>
+  <%= render 'errors' %>
+  <%= f.label 'Subject', 'Reason for appointment' %>
+  <%= f.text_field 'name', placeholder: 'Short description'%>
+  <%= f.submit 'Submit' %>
+<% end %>
