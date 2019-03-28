@@ -4,14 +4,16 @@
 <%= image_tag @topic.image.url, class: "topic-show" %>
 
 
-<div class="col-md-8">
+<div class="col-md-6">
 <br>
 <br>
 <p>Average Rating </p> 
 <div class="average-review-rating" data-score=<%= @average_review %>></div>
 <span>Based on <%= @topic.reviews.count %> reviews </span>
-<p><%= @topic.body %></p>
+<div class= "text">
+<p> <%= simple_format( @topic.body) %> </p>
 <p><%= @topic.date %></p>
+</div>
 <br>
 <% if current_user && current_user.admin? %>
 <%= link_to "Edit", edit_topic_path(@topic), :class => 'btn btn-custom' %>
@@ -23,15 +25,13 @@
 <br>
 </div>
 
-<div class="col-md-8">
+<div class="col-md-9">
 <%= link_to "Click here to write a review!", new_topic_review_path(@topic), :class => 'btn btn-custom' %>
 <% end %>
 
 </div>
 <br>
 <br>
-
-  <img  src="../images/logo.jpg" width ="100" heigh = "100" alt="">
 
 
 <!-- Video Show -->
@@ -50,7 +50,7 @@
 	<div class="reviews">
 <h3>Reviews</h3>
 <% if @reviews.blank? %>
-	          <h3>No reviews just yet, would you like to add the first!</h3>
+	          <h3>No reviews just yet, would you like to add the first?</h3>
 	          <%= link_to "Write Review", new_topic_review_path(@topic), class: "btn btn-danger" %>
 	        <% else %>
 <!-- Where the reviews/ratings will go  -->

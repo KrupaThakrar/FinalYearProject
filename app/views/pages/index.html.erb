@@ -4,10 +4,67 @@
 <%= link_to 'Download Topics', resumes_url, :class => 'btn btn-danger' %>
 <br>
 <br>
-<%= form_tag topics_path, :method => 'get' do %>
-	<%= text_field_tag :search, params[:search] %>
-	<%= submit_tag "Search" %>
-<% end %>
+
+<div class="container">
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="2" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="3" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="4" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="5" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="6" class="active"></li>
+
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+
+      <div class="item active">
+        <img src="../assets/slider7.jpg" alt="Los Angeles" width="90%">
+        <div class="carousel-caption">
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="../assets/slider2.jpg" alt="Chicago" width="90%" >
+        <div class="carousel-caption">
+        </div>
+      </div>
+    
+      <div class="item">
+        <img src="../assets/slider3.jpg" alt="New York" width="90%" >
+        <div class="carousel-caption">
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="../assets/slider4.jpg" alt="New York" width="90%" >
+        <div class="carousel-caption">
+        </div>
+      </div>
+
+       <div class="item">
+        <img src="../assets/slider5.jpg" alt="New York" width="90%" >
+        <div class="carousel-caption">
+        </div>
+      </div>
+
+       <div class="item">
+        <img src="../assets/slider6.jpg" alt="New York" width="90%" >
+        <div class="carousel-caption">
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="../assets/slider1.jpg" alt="New York" width="90%" >
+        <div class="carousel-caption">
+        </div>
+      </div>
+    </div>
+</div>
 
 
 <h2>Most Popular Posts</h2>
@@ -25,17 +82,17 @@
   <div class="row">
     <div class="col-md-4">
       <div class="thumbnail">
-        <a href="/topics/2" target="_blank">
+        <a href="/topics/42" target="_blank">
           <img src="/assets/elder.jpg" alt="Lights" style="width:100%">
           <div class="caption">
-            <p>How to use skype</p>
+            <p>Video calling whilst using Skype </p>
           </div>
         </a>
       </div>
     </div>
     <div class="col-md-4">
       <div class="thumbnail">
-        <a href="/topics/6" target="_blank">
+        <a href="/topics/52" target="_blank">
           <img src="/assets/fitbit.jpg" alt="Nature" style="width:100%">
           <div class="caption">
             <p>How does a fitbit benefit your health?</p>
@@ -45,7 +102,7 @@
     </div>
     <div class="col-md-4">
       <div class="thumbnail">
-        <a href="/topics/13" target="_blank">
+        <a href="/topics/45" target="_blank">
           <img src="/assets/laptop.jpg" alt="Fjords" style="width:100%">
           <div class="caption">
             <p>How to set up emails</p>
