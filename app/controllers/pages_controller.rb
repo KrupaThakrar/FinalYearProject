@@ -11,6 +11,9 @@ class PagesController < ApplicationController
 		@title = 'Contact';
 		@content = 'This is the contact page'
 	end
+	def send_form
+    ContactMailer.contact_email(params).deliver
+  	end
 	def index
 	end 
 end
