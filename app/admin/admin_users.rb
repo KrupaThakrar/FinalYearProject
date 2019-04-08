@@ -1,7 +1,7 @@
 ActiveAdmin.register AdminUser do
   config.remove_action_item(:destroy)
   actions :all, :except => :destroy
-   
+
   permit_params :email, :password, :password_confirmation
 
 
