@@ -5,8 +5,8 @@
 <br>
 <br>
 <%= form_tag topics_path, :method => 'get' do %>
-	<%= text_field_tag :search, params[:search] %>
-	<%= submit_tag "Search" %>
+  <%= text_field_tag :search, params[:search], required: true %>
+  <%= submit_tag "Search" %>   
 <% end %>
 
 <% @topics.each do |topic| %>

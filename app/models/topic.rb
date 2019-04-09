@@ -12,10 +12,10 @@ class Topic < ActiveRecord::Base
 	mount_uploader :attachment, AttachmentUploader 
 
 	def self.search(search)
-		if search 
-			where(["title LIKE ?","%#{search}%"])
-		else
-			all 
-	end
+        if search 
+            where(["title LIKE ?","%#{search}%"])
+        else
+		all 
+    end
 end
 end 

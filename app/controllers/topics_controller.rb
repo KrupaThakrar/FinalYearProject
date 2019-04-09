@@ -5,7 +5,11 @@ class TopicsController < ApplicationController
 	before_action :set_topic, only: [:show, :edit, :update, :destroy, :upvote, :downvote]
 	
 	def index
-		@topics = Topic.search(params[:search]).paginate(:page => params[:page], :per_page => 5)
+	 #if params[:search].present?
+	    @topics = Topic.search(params[:search]).paginate(:page => params[:page], :per_page => 5)
+	  #else
+          #flash[:success] = "No result found"
+	  #end
 	end
 
 	def show
