@@ -5,7 +5,8 @@
 <% end %>
 <br />
 <% if current_user && current_user.admin? %>
-<%= link_to "New Resume", new_resume_path, :class => 'btn btn-custom' %>   
+<%= link_to "New Resume", new_resume_path, :class => 'btn btn-default' %>   
+
 <% end %>
 <br />
 <br />
@@ -25,7 +26,7 @@
         <td><%= link_to "Download file by clicking me!", resume.attachment_url %></td>
      <% if current_user && current_user.admin? %>
         <td><%= link_to "Edit", new_resume_path(resume), :class => 'btn btn-default' %></td>
-        <td><%= button_to "Delete",  resume, method: :delete, class: "btn btn-danger", confirm: "Are you sure that you wish to delete #{resume.name}?" %></td>
+        <td><%= button_to "Delete",  resume, :class => 'btn btn-default', method: :delete, data: {confirm: 'Are you sure?'} %></td>
         <% end %>
       </tr>
     <% end %>

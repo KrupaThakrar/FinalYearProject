@@ -18,7 +18,7 @@ class Booking < ActiveRecord::Base
 
     before_validation :calculate_end_time
   
-
+    
     scope :end_during, ->(new_start_time, new_end_time) do
       if (!new_start_time.nil?) && (!new_end_time.nil?)
         where('end_time > ? AND end_time < ?', new_start_time, new_end_time)

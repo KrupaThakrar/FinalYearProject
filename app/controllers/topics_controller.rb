@@ -4,12 +4,14 @@ class TopicsController < ApplicationController
 	before_action :authenticate_user!, except: [:show, :index, :update, :destroy]
 	before_action :set_topic, only: [:show, :edit, :update, :destroy, :upvote, :downvote]
 	
-	def index
-	 #if params[:search].present?
+	def index 
+	  if params[:search].present?
 	    @topics = Topic.search(params[:search]).paginate(:page => params[:page], :per_page => 5)
-	  #else
-          #flash[:success] = "No result found"
-	  #end
+	    flash[:notice] = "No records found based on the search." if @topics.blank?
+	  else
+	    @topics = Topic.all.paginate(:page => params[:page], :per_page => 5) 
+	    flash[:notice] = "No records found in Database." if @topics.blank?
+	  end
 	end
 
 	def show
@@ -18,7 +20,7 @@ class TopicsController < ApplicationController
 		if @topic.reviews.blank?
 		   @average_review = 0
 		else
-	    @average_review = @topic.reviews.average(:rating).round(2)
+	    @average_review = @topic.reviews.average(:rating)
 	end
 	end 
 

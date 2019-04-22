@@ -13,9 +13,9 @@
     <td>
       <%= (booking.calculate_end_time + 60).strftime('%e %b %Y %H:%M%p') %>
     </td>
-    <td><%= link_to "Delete", appointment_booking_path(@appointment, booking), :class => 'btn btn-custom', data: { confirm: 'Are you sure?' }, method: :delete %>
+    <td><%= link_to "Delete", appointment_booking_path(@appointment, booking), :class => 'btn btn-default', data: { confirm: 'Are you sure?' }, method: :delete %>
     </td>
-    <td><%= link_to "Edit", edit_appointment_booking_path(@appointment, booking), :class => 'btn btn-custom' %>
+    <td><%= link_to "Edit", edit_appointment_booking_path(@appointment, booking), :class => 'btn btn-default' %>
     </td>
   </tr>
   <% end %>
