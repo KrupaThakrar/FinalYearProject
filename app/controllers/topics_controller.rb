@@ -57,12 +57,12 @@ class TopicsController < ApplicationController
 
 	def upvote
 	@topic.upvote_from current_user
-	redirect_to topics_path
+	redirect_to topics_path(@topic)
 	end 
 
 	def downvote
 	@topic.downvote_from current_user
-	redirect_to topics_path
+	redirect_to topics_path(@topic)
 	end 
 
 	private 

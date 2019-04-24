@@ -25,18 +25,24 @@ Fullhurst Avenue, LE2 1BJ, Leicestershire
 
   <div class="row">
     <label for="name">Your Name:</label><br />
-    <input id="name" class="input" name="name" type="text" value="" size="30" /><br />
+    <input id="name" class="input" name="name" type="text" value="" size="30" placeholder="Please enter your name *" required="required" data-error="Name is required.">
+    <div class="help-block with-errors"></div><br />
   </div>
+
+
 
   <div class="row">
     <label for="email">Your Email:</label><br />
-    <input id="email" class="input" name="email" type="text" value="" size="30" /><br />
+    <input id="email" class="input" name="email" type="text" value="" size="30" placeholder="Please enter a valid email *" required="required" data-error="Please enter a valid email.">
+    <div class="help-block with-errors"/><br />
   </div>
 
   <div class="row">
     <label for="message">Your Message:</label><br />
-    <textarea id="message" class="input" name="message" rows="7" cols="30"></textarea><br />
+    <textarea id="message" class="input" name="message" rows="7" cols="30" placeholder="Please enter a valid email *" required="required" data-error="Please enter a valid email."></textarea><br />
   </div>
+
+
   <input id="submit_button" type="submit" value="Send email" />
 
 </form> 

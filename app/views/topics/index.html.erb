@@ -33,10 +33,10 @@
 <br>
 <br>
 	<% if current_user && current_user.admin? %>
-		<%= link_to "Edit", edit_topic_path(topic), :class => 'btn btn-danger' %>
-	<%= link_to "Destroy", topic, :class => 'btn btn-danger', method: :delete, data: {confirm: 'Are you sure?'} %>
+		<%= link_to "Edit", edit_topic_path(topic), :class => 'btn btn-default' %>
+	<%= link_to "Destroy", topic, :class => 'btn btn-default', method: :delete, data: {confirm: 'Are you sure?'} %>
 	<% end %>
-	<%= link_to "Show", topic_path(topic), :class => 'btn btn-danger' %>
+	<%= link_to "Show", topic_path(topic), :class => 'btn btn-default' %>
 <% end %>
 
 <div>
